@@ -6,7 +6,7 @@
 <div class="form-filter d-flex mt-5 ms-4">
   <%= form_tag restaurants_path, method: :get do %>
     <%= label_tag :city, "Choisis ta ville :", class: "text-filter" %>
-    <%= select_tag :city, options_for_select([["Aucune ville", ""]] + City.pluck(:city_name), params[:city]), class: "text-filter", id: "select-filter" %> <%# .pluck return all the value of column city_name from table city %>
+    <%= select_tag :city, options_for_select([["Toutes les villes", ""]] + City.pluck(:city_name), params[:city]), class: "text-filter", id: "select-filter" %> <%# .pluck return all the value of column city_name from table city %>
     <%= submit_tag "Filtrer", class:"btn btn-up-show" %>
   <% end %>
 </div>

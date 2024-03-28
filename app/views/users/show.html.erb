@@ -2,10 +2,10 @@
 
 <h1 class="h1-resto">BIENVENUE DANS VOTRE ESPACE CLIENT</h1>
 
-<div class="box_profil">
+<div class="d-flex justify-content-around flex-wrap mt-5 mb-5">
     <div class="profile-card">
         <div class="photo-profil">
-            <%= image_tag "profil.png" , alt: "Photo de profil" %>   
+            <%= image_tag "profil.png" , alt: "Photo de profil" %>
         </div>
 
         <div class="input-container-profile <%= 'active' if @user.email.present? %>">
@@ -18,13 +18,13 @@
         </div>
     </div>
        
-    <div class="box_favoris">
-      <h1>Restaurants favoris</h1>
 
+    <div class="favCard">
+    <p class="favHeading">Restaurants favoris</p>
       <% if @user.favorites.present? %>
         <% @user.favorites.each do |favorite| %>
             <%= favorite.restaurant.restaurant_name %>
-            <%= button_to "Supprimer", favorite_path(favorite), method: :delete %>
+            <%= button_to "Supprimer", favorite_path(favorite), method: :delete, class: "btn btn-cancel" %>
         <% end %>
       <% else %>
         <p>Vous n'avez pas encore ajouté de restaurants à vos favoris.</p>
@@ -34,13 +34,14 @@
 
 <h1 class="h1-resto">Vos réservations</h1>
 <% if @reservations.any? %>
-  <ul>
+  <div class="mx-4">
     <% @reservations.each do |reservation| %>
-      <li> Vous avez réservé chez <%= reservation.restaurant.restaurant_name %> pour <%= reservation.number %> personnes, le <%= reservation.date.strftime("%d/%m/%Y") %> à <%= reservation.time.strftime("%H:%M") %> </li>
-      <%= button_to "Supprimer", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cette réservation ?" }, class: "btn btn-danger" %>
-
+      <div class="comment-user p-2 mb-4">
+        <p> Vous avez réservé chez <%= reservation.restaurant.restaurant_name %> pour <%= reservation.number %> personnes, le <%= reservation.date.strftime("%d/%m/%Y") %> à <%= reservation.time.strftime("%H:%M") %> </p>
+        <%= button_to "Supprimer", restaurant_reservation_path(reservation.restaurant, reservation), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cette réservation ?" }, class: "btn btn-danger" %>
+      </div>
     <% end %>
-  </ul>
+  </div>
 <% else %>
   <p>Aucune réservation en cours</p>
 <% end %>
