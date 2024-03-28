@@ -1,3 +1,5 @@
+console.log("fileloaded", localStorage.getItem("opendys"))
+
 function applyFontPreference() {
   var isDyslexic = localStorage.getItem("opendys");
   if (isDyslexic === "true") {
@@ -26,7 +28,10 @@ function applyH1FontPreference() {
   }
 }
 
-function toggleOpenDyslexic() {
+function toggleOpenDyslexic(event) {
+  event.preventDefault();
+  console.log("click")
+  console.log("fileloaded", localStorage.getItem("opendys"))
   // Toggle font preference
   var isDyslexic = localStorage.getItem("opendys");
   localStorage.setItem(
@@ -40,7 +45,6 @@ function toggleOpenDyslexic() {
 }
 
 
-
 window.onload = function () {
   // Apply font preference on page load
   applyFontPreference();
@@ -51,3 +55,14 @@ window.onload = function () {
     .getElementById("toggle-opendys")
     .addEventListener("click", toggleOpenDyslexic);
 };
+
+//$(document).on('turbo:load', function() {
+  // Apply font preference on page load
+  //applyFontPreference();
+  //applyH1FontPreference();
+
+  // Add event listener to the button
+  //document
+    //.getElementById("toggle-opendys")
+   // .addEventListener("click", toggleOpenDyslexic);
+//});
