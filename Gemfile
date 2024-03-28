@@ -5,6 +5,8 @@ gem 'table_print'
 gem 'faker'
 gem 'devise'
 gem 'dotenv'
+gem 'pry'
+gem 'mailjet'
 
 gem 'jquery-rails'
 
