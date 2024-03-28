@@ -2,7 +2,6 @@ class UserMailer < ApplicationMailer
     default from: ENV['MAILJET_DEFAULT_FROM']
 
     def welcome_email(user)
-      require 'pry'; binding.pry
       #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
       @user = user 
   
