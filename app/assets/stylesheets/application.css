@@ -236,13 +236,18 @@ margin-right: 3%;
   background-color: initial !important;
   color: #B92736;
 }
-@media (max-width: 768px) {
+@media (max-width: 730px) {
   .navnav-out.navbar-text {
-    font-size: 14px; /* Ajuster la taille du texte pour les boutons */
+    font-size: 6px; 
   }
   .navnav.navbar-text {
-    font-size: 14px; /* Ajuster la taille du texte pour les liens */
+    font-size: 6px; 
   }
+  .logo-img {
+    height: 50%;
+  
+  }
+  
 }
 
 /* Start dropdown menu */
