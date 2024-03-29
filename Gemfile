@@ -8,6 +8,8 @@ gem 'dotenv'
 gem 'mailjet'
 gem 'pry'
 
+gem 'canonical-rails', github: 'jumph4x/canonical-rails'
+
 gem 'jquery-rails'
 
 
