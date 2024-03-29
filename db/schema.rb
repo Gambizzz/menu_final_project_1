@@ -50,6 +50,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_121813) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "city"
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
@@ -81,6 +84,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_121813) do
   end
 
   create_table "reservations", force: :cascade do |t|
+    t.integer "number"
     t.datetime "date"
     t.time "time"
     t.bigint "restaurant_id", null: false
@@ -93,17 +97,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_121813) do
 
   create_table "restaurants", force: :cascade do |t|
     t.string "restaurant_name"
-    t.bigint "admin_id"
     t.bigint "city_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["admin_id"], name: "index_restaurants_on_admin_id"
     t.index ["city_id"], name: "index_restaurants_on_city_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.string "city"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -122,4 +125,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_26_121813) do
   add_foreign_key "favorites", "users"
   add_foreign_key "reservations", "restaurants"
   add_foreign_key "reservations", "users"
+  add_foreign_key "restaurants", "cities"
 end
