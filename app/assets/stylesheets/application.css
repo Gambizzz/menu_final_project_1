@@ -202,6 +202,40 @@ margin-right: 3%;
 .fa-whatsapp {
   color: #FF7E33;
 }
+
+@media (max-width: 1400px) {
+  .shadow{
+  max-width: 100%;
+  width: auto;
+  }
+  @media (max-width: 993px){
+    .shadow{
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 993px) {
+  .btt{
+    display: flex;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 992px) { 
+  .hero-index, .cities  { 
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 700px) { 
+  .padding_img_city img {
+    max-width: 100%;
+    height: auto; 
+  }
+  
+}
 /* END PAGE TEAM */
 
 
