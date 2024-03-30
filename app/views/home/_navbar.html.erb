@@ -1,6 +1,6 @@
 <div class="container">
-  <header class="d-flex justify-content-between py-3 flex-wrap">
-    <ul class="nav">
+  <header class="d-flex justify-content-around py-3 flex-wrap">
+    <ul class="nav category-nav">
       <li class="nav-item"><%= link_to "RESTAURANTS", restaurants_path, class: "navnav nav-link navbar-text navbar-text-lg" %></li>
     </ul>
    
@@ -11,8 +11,8 @@
     </ul>
     
     <% if user_signed_in? || admin_signed_in? %>
-      <div class="btn-group">
-        <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="btn-group category-nav">
+        <a class="dropdown-toggle navnav-out navbar-text navbar-text-lg-out category-nav" type="button" data-bs-toggle="dropdown" aria-expanded="false">
           <% if current_admin %>
             MON ESPACE PRO
           <% elsif current_user %>
