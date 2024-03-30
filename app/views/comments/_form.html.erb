@@ -1,9 +1,9 @@
 <%= form_with(model: [restaurant, restaurant.comments.build]) do |form| %>
 
   <div class="mb-3">
-    <%= form.label :body, "Ajoute un commentaire :", class: "form-label text-edit" %>
+    <%= form.label :body, "Ajouter un commentaire :", class: "form-label text-edit" %>
     <%= form.text_area :body, class: "form-control-comment" %>
   </div>
 
-  <%= form.submit class: "btn btn-primary btn-add-comment" %>
+  <%= form.submit "Envoyer", class: "btn btn-primary btn-add-comment" %>
 <% end %>
