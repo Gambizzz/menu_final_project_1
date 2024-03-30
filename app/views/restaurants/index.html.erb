@@ -1,7 +1,8 @@
 <% content_for :title, "Liste des restaurants" %>
+<% content_for :meta_description, "Page de la liste des restaurants ayant importer leur menu. Les restaurants peuvent être triés par ville." %>
 
 <h1 class="h1-resto">QU'EST-CE QU'ON MANGE AUJOURD'HUI ?</h1>
-<p class="p-resto"> Venez et découvrez les menus à jour de vos restaurants préférés ! Grâce à Menu, vous saurez toujours ce qu'il se passe en cuisine !</p>
+<p class="p-resto"> Venez découvrir les menus à jour de vos restaurants préférés ! Grâce à Menu, vous saurez toujours ce qu'il se passe en cuisine !</p>
 
 <div class="form-filter d-flex mt-5 ms-4">
   <%= form_tag restaurants_path, method: :get do %>
@@ -25,7 +26,7 @@
         <span class="lighter">
           Venez découvrir l'univers de notre restaurant ! Cliquez pour découvrir notre menu et nos informations.
           <%= link_to restaurant do %>
-            <button class="button-card"> Découvrir </button>
+            <button class="button-card"> Voir plus </button>
           <% end %>
         </span>
       </div>

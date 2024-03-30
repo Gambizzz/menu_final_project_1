@@ -1,4 +1,5 @@
 <% content_for :title, "Se connecter" %>
+<% content_for :meta_description, "Page de connexion" %>
 
 <div class="coontainer">
   <h2 class="h2-sign">SE CONNECTER</h2>
@@ -6,15 +7,15 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form">
       <%= f.email_field :email, class: "input", placeholder: "Email", required: true %>
-      <%= f.password_field :password, class: "input", type: "password", placeholder: "Password", required: true %>
-      <span class="forgot-password"> <%= link_to 'Forgot your user password ?', new_user_password_path %> </span>
-      <span class="forgot-password"> <%= link_to 'Forgot your admin password ?', new_admin_password_path %> </span>
-      <%= f.submit "LOG IN", class: "login-button" %>
+      <%= f.password_field :password, class: "input", type: "password", placeholder: "Mot de passe", required: true %>
+      <span class="forgot-password"> <%= link_to 'Mot de passe oublié (client) ?', new_user_password_path %> </span>
+      <span class="forgot-password"> <%= link_to 'Mot de passe oublié (professionnel) ?', new_admin_password_path %> </span>
+      <%= f.submit "LOGIN", class: "login-button" %>
     </div>
 
     <p class="p-log"> Pas encore de compte ? &nbsp <%= link_to "S'INSCRIRE", new_user_registration_path %> &nbsp comme client</p>
 
-    <p class="p-log"> Ou &nbsp <%= link_to "S'INSCRIRE", new_admin_registration_path %> &nbsp comme restaurateur</p>
+    <p class="p-log"> Ou &nbsp <%= link_to "S'INSCRIRE", new_admin_registration_path %> &nbsp comme professionnel</p>
   <% end %>
 </div>
 
