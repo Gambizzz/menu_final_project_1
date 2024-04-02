@@ -1,14 +1,17 @@
 class Restaurant < ApplicationRecord
-    belongs_to :admin
-    has_many :favorites, dependent: :destroy
-
     validates :restaurant_name, presence: true
+    validates :city, presence: true
 
     belongs_to :admin
+    belongs_to :city
     has_one_attached :image
     has_many :comments
     has_many :reservations
-    belongs_to :city
+    has_many :favorites, dependent: :destroy
 
-    validates :city, presence: true
+    after_create :restaurant_send
+
+    def restaurant_send
+      AdminMailer.restaurant_email(self).deliver_now
+    end
   end
