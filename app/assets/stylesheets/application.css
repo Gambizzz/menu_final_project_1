@@ -113,7 +113,7 @@ margin-right: 3%;
 
 .lead-eat {
   font-size: 250%;
-  color: #FF7E33;
+  color: #ff4800;
 }
 
 .lead-cities {
@@ -124,7 +124,7 @@ margin-right: 3%;
 
 .lead-come {
   font-size: 250%;
-  color: #FF7E33;
+  color: #ff4800;
 }
 
 .shadow {
@@ -437,6 +437,7 @@ margin-right: 3%;
 .cta-middle {
   display: flex;
   justify-content: center;
+  color: #ff4800;
 }
 
 .logo-section {
