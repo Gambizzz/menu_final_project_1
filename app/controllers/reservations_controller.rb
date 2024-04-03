@@ -31,6 +31,7 @@ class ReservationsController < ApplicationController
     # search for specifically "id"
     @reservation = Reservation.find_by(id: params[:id])
     if @reservation
+
       @reservation.destroy
       redirect_to root_path, notice: "La réservation a été supprimée avec succès!"
     else

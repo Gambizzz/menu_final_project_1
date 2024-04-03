@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <h1> Salut, un client vient d'annuler sa réservation </h1>
+    <p>
+      Il avait réservé pour <%= @reservation.number %> personnes, le <%= @reservation.date.strftime("%d/%m/%Y") %> à <%= @reservation.time.strftime("%H:%M") %>
+    </p>
+    <p>
+      Pour accéder à ton espace professionnel, connecte-toi via : <%= @url %>
+    </p>
+    <p> À très vite sur MENU ! </p>
+  </body>
+</html>

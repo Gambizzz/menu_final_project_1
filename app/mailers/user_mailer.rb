@@ -18,4 +18,11 @@ class UserMailer < ApplicationMailer
       @url = 'https://menuu-741b3999a7b7.herokuapp.com'
       mail(to: @user.email, subject: 'Réservation prise en compte')
     end
+
+    def cancel_email(user, reservation)
+      @reservation = reservation
+      @user = user
+      @url = 'https://menuu-741b3999a7b7.herokuapp.com'
+      mail(to: @user.email, subject: 'Votre réservation a été annulée')
+    end
 end

@@ -1,0 +1,10 @@
+Salut, ta réservation chez <%= @reservation.restaurant.restaurant_name %> vient d'être annulée !
+==========================================================
+
+Tu avais réservé pour <%= @reservation.number %> personnes, le <%= @reservation.date.strftime("%d/%m/%Y") %> à <%= @reservation.time.strftime("%H:%M") %>
+
+Nous sommes désolés, nous espérons vous revoir bientôt.
+
+Pour accéder à ton espace client, connecte-toi via : <%= @url %>
+
+À très vite sur MENU !
