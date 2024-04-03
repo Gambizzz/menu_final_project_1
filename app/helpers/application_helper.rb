@@ -3,9 +3,9 @@ module ApplicationHelper
     {
       "@context": "http://schema.org",
       "@type": "Restaurant",
-      "name": @restaurant_name,
+      "name": restaurant.restaurant_name,
       "description": "Text",
-      "hasMenu": "Menu",
+      "image": "ImageObject",
 
       # Add others properties if needed
     }.to_json.html_safe
