@@ -3,7 +3,7 @@ module ApplicationHelper
     {
       "@context": "http://schema.org",
       "@type": "Restaurant",
-      "name": restaurant.restaurant_name,
+      "name": @restaurant_name,
       "description": "Text",
       "hasMenu": "Menu",
 
