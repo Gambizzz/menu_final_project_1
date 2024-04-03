@@ -5,9 +5,9 @@ module ApplicationHelper
       "@type": "Restaurant",
       "name": restaurant.restaurant_name,
       "description": "Text",
-      "hasMenu": "Menu",
-      
-      # Ajout d'autres propriétés ici selon les besoins
+      "image": "ImageObject",
+
+      # Add others properties if needed
     }.to_json.html_safe
   end
 end
