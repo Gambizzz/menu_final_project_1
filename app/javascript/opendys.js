@@ -55,14 +55,3 @@ window.onload = function () {
     .getElementById("toggle-opendys")
     .addEventListener("click", toggleOpenDyslexic);
 };
-
-//$(document).on('turbo:load', function() {
-  // Apply font preference on page load
-  //applyFontPreference();
-  //applyH1FontPreference();
-
-  // Add event listener to the button
-  //document
-    //.getElementById("toggle-opendys")
-   // .addEventListener("click", toggleOpenDyslexic);
-//});
