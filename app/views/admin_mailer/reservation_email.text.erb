@@ -1,0 +1,8 @@
+Salut, <%= @reservation.user.email %> a réservé dans ton établissement !
+==========================================================
+
+La réservation est pour <%= @reservation.number %> personnes, le <%= @reservation.date.strftime("%d/%m/%Y") %> à <%= @reservation.time.strftime("%H:%M") %>
+
+Pour accéder à ton espace professionel, connecte-toi via : <%= @url %>
+
+À très vite sur MENU !

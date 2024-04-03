@@ -5,9 +5,9 @@
   </head>
 
   <body>
-    <h1> Salut, voici ta réservation chez ? </h1>
+    <h1> Salut, voici ta réservation chez <%= @reservation.restaurant.restaurant_name %> </h1>
     <p>
-      Tu a réservé pour X personnes, le ? à ? %> 
+      Tu a réservé pour <%= @reservation.number %> personnes, le <%= @reservation.date.strftime("%d/%m/%Y") %> à <%= @reservation.time.strftime("%H:%M") %>
     </p>
     <p>
       Pour accéder à ton espace client, connecte-toi via : <%= @url %>

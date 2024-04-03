@@ -1,8 +1,8 @@
-Salut, voici ta réservation !
+Salut, voici ta réservation chez <%= @reservation.restaurant.restaurant_name %> !
 ==========================================================
 
-Tu a réservé pour X personnes, le ? à ? 
+Tu a réservé pour <%= @reservation.number %> personnes, le <%= @reservation.date.strftime("%d/%m/%Y") %> à <%= @reservation.time.strftime("%H:%M") %>
 
 Pour accéder à ton espace client, connecte-toi via : <%= @url %>
 
-À très vite sur monsite.fr !
+À très vite sur MENU !

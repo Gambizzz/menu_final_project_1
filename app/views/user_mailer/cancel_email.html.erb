@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <h1> Salut, ta réservation chez <%= @reservation.restaurant.restaurant_name %> vient d'être annulée </h1>
+    <p>
+      Tu avais réservé pour <%= @reservation.number %> personnes, le <%= @reservation.date.strftime("%d/%m/%Y") %> à <%= @reservation.time.strftime("%H:%M") %>
+    </p>
+    <p>
+      Nous sommes désolés, nous espérons vous revoir bientôt.
+    </p>
+    <p>
+      Pour accéder à ton espace client, connecte-toi via : <%= @url %>
+    </p>
+    <p> À très vite sur MENU ! </p>
+  </body>
+</html>
