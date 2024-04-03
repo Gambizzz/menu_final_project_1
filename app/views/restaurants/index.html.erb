@@ -14,22 +14,21 @@
 
 <div class="row-resto d-flex justify-content-around flex-wrap">
   <% @restaurants.each do |restaurant| %>
-    <article class="card">
+    <div class="card">
       <div class="card-img-resto d-flex flex-wrap">
-        <%= image_tag "food 2.avif", class: "card-img-resto mb-2", alt: "Photo de couverture du restaurant" %>
+        <%= image_tag "food_2.avif", class: "card-img-resto mb-2", alt: "Photo de couverture du restaurant" %>
       </div>
 
       <div class="project-info d-flex flex-wrap">
         <div class="flex justify-content-center">
           <div class="project-title"> <%= restaurant.restaurant_name %> </div>
         </div>
-        <span class="lighter">
-          Venez découvrir l'univers de notre restaurant ! Cliquez pour découvrir notre menu et nos informations.
-          <%= link_to restaurant do %>
-            <button class="button-card"> Voir plus </button>
-          <% end %>
-        </span>
+        <div class="lighter">
+          <p> Venez découvrir l'univers de notre restaurant ! Cliquez pour découvrir notre menu et nos informations. </p>
+          <%= link_to 'Voir plus', restaurant, class:"button-card d-flex justify-content-center" %>
+        </div>
       </div>
-    </article>
+    </div>
   <% end %>
 </div>
+

@@ -5,15 +5,15 @@
 <p class="p-resto"><%= @restaurant.city.city_name %></p>
 
 <div class="show-content d-flex justify-content-around flex-wrap">
-  <section class="menu-img flex mx-4 my-4">
+  <div class="menu-img flex mx-4 my-4">
     <% if @restaurant.image.attached? %>
       <%= image_tag @restaurant.image, alt: 'Photo du menu du restaurant', class:"image_tag_upld" %>
     <% else %>
       <p class="p-contact"> PAS ENCORE DE MENU </p>
     <% end %>
-  </section>
+  </div>
 
-  <section class="infos-resto flex mx-4 my-4"">
+  <div class="infos-resto flex mx-4 my-4">
     <div class="card-infos card-5 p-3">
       <p class="card__exit">※</p>
       <div class="text-edit mb-4">
@@ -44,7 +44,7 @@
         </div>
       <% end %>
     </div>
-  </section>
+  </div>
 </div>
 
   <div class="upload-img mx-4">
@@ -81,3 +81,8 @@
       <%= render partial: "comments/form", locals: { restaurant: @restaurant } %>
     <% end %>
   </section>
+
+  <script type="application/ld+json">
+    <%= restaurant_jsonld(@restaurant) %>
+  </script>
+
