@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+a:hover{
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "OpenDyslexic";
   src: url('/assets/OpenDyslexicAlta-Regular.otf');
@@ -35,7 +39,7 @@ justify-content: end;
 margin-right: 3%;
 }
 
-.button-btt {
+.btn-btt {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -62,7 +66,7 @@ margin-right: 3%;
   fill: #f36c01;
 }
 
-.button-btt:hover {
+.btn-btt:hover {
   width: 140px;
   border-radius: 50px;
   transition-duration: 0.3s;
@@ -70,13 +74,13 @@ margin-right: 3%;
   align-items: center;
 }
 
-.button-btt:hover .svgIcon {
+.btn-btt:hover .svgIcon {
   /* width: 20px; */
   transition-duration: 0.3s;
   transform: translateY(-200%);
 }
 
-.button-btt::before {
+.btn-btt::before {
   position: absolute;
   bottom: -20px;
   content: "Retour en haut";
@@ -85,7 +89,7 @@ margin-right: 3%;
   font-size: 0px;
 }
 
-.button-btt:hover::before {
+.btn-btt:hover::before {
   font-size: 13px;
   opacity: 1;
   bottom: unset;
@@ -109,7 +113,7 @@ margin-right: 3%;
 
 .lead-eat {
   font-size: 250%;
-  color: #FF7E33;
+  color: #ff4800;
 }
 
 .lead-cities {
@@ -120,7 +124,7 @@ margin-right: 3%;
 
 .lead-come {
   font-size: 250%;
-  color: #FF7E33;
+  color: #ff4800;
 }
 
 .shadow {
@@ -433,6 +437,7 @@ margin-right: 3%;
 .cta-middle {
   display: flex;
   justify-content: center;
+  color: #ff4800;
 }
 
 .logo-section {
