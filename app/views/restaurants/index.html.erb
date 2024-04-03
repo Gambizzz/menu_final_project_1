@@ -14,36 +14,21 @@
 
 <div class="row-resto d-flex justify-content-around flex-wrap">
   <% @restaurants.each do |restaurant| %>
-    <article class="card">
+    <div class="card">
       <div class="card-img-resto d-flex flex-wrap">
-        <%= image_tag "food 2.avif", class: "card-img-resto mb-2", alt: "Photo de couverture du restaurant" %>
+        <%= image_tag "food_2.avif", class: "card-img-resto mb-2", alt: "Photo de couverture du restaurant" %>
       </div>
 
       <div class="project-info d-flex flex-wrap">
         <div class="flex justify-content-center">
           <div class="project-title"> <%= restaurant.restaurant_name %> </div>
         </div>
-        <span class="lighter">
-          Venez découvrir l'univers de notre restaurant ! Cliquez pour découvrir notre menu et nos informations.
-          <%= link_to restaurant do %>
-            <button class="button-card"> Voir plus </button>
-          <% end %>
-        </span>
+        <div class="lighter">
+          <p> Venez découvrir l'univers de notre restaurant ! Cliquez pour découvrir notre menu et nos informations. </p>
+          <%= link_to 'Voir plus', restaurant, class:"button-card d-flex justify-content-center" %>
+        </div>
       </div>
-    </article>
+    </div>
   <% end %>
 </div>
-<<<<<<< HEAD
-=======
 
-<div class="btt">
-  <a href="#">
-    <button class="button-btt">
-      <svg class="svgIcon" viewBox="0 0 384 512">
-        <path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"></path>
-      </svg>
-    </button>
-  </a>
-</div>
-
->>>>>>> development
