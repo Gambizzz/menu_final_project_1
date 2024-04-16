@@ -78,4 +78,11 @@ réservations passées, en cours et à venir.
    
 • Une application 100 % fonctionnelle
 
-• Un front-end parfait
+• Un front-end parfait et responsive
+
+
+Lien Figma : https://www.figma.com/file/X263wufvh7oE4MfqBedLyD/Untitled?type=design&node-id=0-1&mode=design&t=DYgXyRi6CpVMiWmI-0
+
+Lien Trello : https://trello.com/b/BkhLQN7J/menu
+
+Lien Heroku : https://menuu-741b3999a7b7.herokuapp.com/
